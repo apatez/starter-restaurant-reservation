@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Reservations() {
-    const [name, setName] = useState([]);
+    //const [name, setName] = useState([]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -21,19 +21,19 @@ function Reservations() {
                     </label>
                     <label htmlFor="mobile_number">
                         Mobile Number:
-                        <input id="mobile_number" type="number" name="mobile_number"/>
+                        <input id="mobile_number" type="tel" name="mobile_number"/>
                     </label>
                     <label htmlFor="reservation_date">
                         Reservation Date:
-                        <input id="reservation_date" type="date" name="reservation_date"/>
+                        <input id="reservation_date" type="date" name="reservation_date" placeholder="YYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}"/>
                     </label>
                     <label htmlFor="reservation_time">
                         Reservation Time:
-                        <input id="reservation_time" type="datetime-local" name="reservation_time"/>
+                        <input id="reservation_time" type="time" name="reservation_time" placeholder="HH:MM" pattern="[0-9]{2}:[0-9]{2}"/>
                     </label>
                     <label>
                         Party Size:
-                        <input id="people" type="number" name="people"/>
+                        <input id="people" type="text" name="people"/>
                     </label>
                     <button type="submit">Submit</button>
                     <button type="button">Cancel</button>
