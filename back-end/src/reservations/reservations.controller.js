@@ -6,9 +6,8 @@ const service = require("./reservations.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
 async function list(req, res) {
-  res.json({
-    data: [],
-  });
+  const data = await service.list();
+  return res.json({ data });
 }
 
 module.exports = {
