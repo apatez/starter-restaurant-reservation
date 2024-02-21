@@ -77,7 +77,6 @@ function reservationDateisValid(req, res, next) {
   }
 
   const dayOfWeek = new Date(reservation_date + ":00:00:00").getDay();
-  console.log(dayOfWeek)
   
   if(dayOfWeek === 2) {
     return next({status: 400, message: `closed`})
@@ -85,7 +84,37 @@ function reservationDateisValid(req, res, next) {
   next();
 }
 
+
+
+function reservationTimeisValid(req, res, next) {
+  const reservationTimeString = req.body.data.reservation_time;
+  console.log(reservationTimeString)
+  const [reservationHour, reservationMinute] = reservationTimeString.split(':').map(Number);
+ 
+
+  const reservationTime = new Date();
+  reservationTime.setHours(reservationHour, reservationMinute, 0, 0);
+
+  const openingTime = new Date();
+  openingTime.setHours(10, 30, 0);
+
+  const closingTime = new Date();
+  closingTime.setHours(21, 30, 0);
+
+  const currentTime = new Date();
+
+  if (reservationTime < openingTime || reservationTime > closingTime) {
+      return next({ status: 400, message: 'Reservation time must be between 10:30am and 9:30pm' });
+  }
+
+  if (reservationTime <= currentTime) {
+      return next({ status: 400, message: 'Reservation time must be in the future' });
+  }
+
+  next();
+}
+
 module.exports = {
   list: asyncErrorBoundary(list),
-  create: [validateReservation, reservationDateisValid, asyncErrorBoundary(create),],
+  create: [validateReservation, reservationDateisValid, reservationTimeisValid, asyncErrorBoundary(create),],
 }
