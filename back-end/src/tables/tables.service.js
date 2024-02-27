@@ -12,9 +12,32 @@ function list() {
       .returning("*")
       .then((created) => created[0]);
   }
+
+  function read(tableId){
+    return knex("tables")
+    .select("*")
+    .where({ table_id: tableId })
+    .first()
+  }
+
+  function update(updatedTable) {
+    return knex("tables")
+    .select("*")
+    .where({ table_id: updatedTable.reservation_id })
+    .update(updatedTable, "*")
+  }
+
+  function destroy(tableId) {
+    return knex("tables")
+    .where({ table_id: tableId })
+    .del()
+  }
   
 
   module.exports = {
     list,
     create,
+    read,
+    update,
+    delete: destroy,
   };

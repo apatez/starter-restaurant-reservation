@@ -1,8 +1,7 @@
 const knex = require("../db/connection");
 
 function read(reservationId) {
-  console.log({reservationId})
-    return knex("reservations")
+  return knex("reservations")
     .select("*")
     .where({ reservation_id: reservationId})
     .first()

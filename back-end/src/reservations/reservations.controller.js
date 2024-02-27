@@ -13,12 +13,11 @@ function read(req, res) {
 // //check whether reservation exists
 async function reservationExists(req, res, next) {
   const reservation = await service.read(req.params.reservation_id);
-  console.log(reservation)
   if (reservation) {
     res.locals.reservation = reservation;
     return next();
   }
-  next({ status: 400, message: `Reservation cannot be found.` });
+  next({ status: 404, message: `${req.params.reservation_id} cannot be found.` });
 }
 
 
@@ -35,12 +34,7 @@ async function create(req, res, next) {
 }
 
 function validateReservation(req, res, next) {
-  const { data } = req.body;
-  const { first_name, last_name, mobile_number, reservation_date, reservation_time, people } = data;
-  const valid = ["first_name", "last_name", "mobile_number", "reservation_date", "reservation_time", "people"]
-  if (!req.body.data){
-   return next({ status: 400, message: `data is missing`})
-  }
+  const { data: {first_name, last_name, mobile_number, reservation_date, reservation_time, people} = {} } = req.body;
   
   if (!first_name || first_name.length === 0) {
     return next({ status: 400, message: `first_name is missing`})
