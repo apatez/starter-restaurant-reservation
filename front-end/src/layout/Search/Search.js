@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ErrorAlert from "../Tables/ErrorAlert";
+import ErrorAlert from "../ErrorAlert";
 import { listReservations, cancelReservation } from "../../utils/api";
 import Reservation from "../Reservation/Reservation";
 

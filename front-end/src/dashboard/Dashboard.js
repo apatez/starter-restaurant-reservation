@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { listReservations, cancelReservation, listTables, finishTable } from "../utils/api";
-import ErrorAlert from "../layout/Tables/ErrorAlert";
+import ErrorAlert from "../layout/ErrorAlert";
 import { next, previous, today } from "../utils/date-time";
 import Reservation from "../layout/Reservation/Reservation";
 import Tables from "./Tables";

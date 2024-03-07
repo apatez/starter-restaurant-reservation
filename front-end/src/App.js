@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Layout from "./layout/Tables/Layout"
+import Layout from "./layout/Layout"
 
 /**
  * Defines the root application component.

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ErrorAlert from "../Tables/ErrorAlert";
+import ErrorAlert from "../ErrorAlert";
 import { useHistory, useParams } from "react-router-dom";
 import {
   createReservation,
