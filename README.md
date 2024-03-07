@@ -36,11 +36,11 @@
 
 
 #### **Seat Reservation:**
-![Seat Reservation](https://user-images.githubusercontent.com/91131873/191555757-1fd6a064-4948-4287-8124-b56df9a2b8a9.png)
+![Seat Reservation](https://github.com/apatez/starter-restaurant-reservation/blob/main/front-end/src/images/us-04-seat-capacity-reservation-start.png)
 
 
 #### **Create Table:**
-![Create Table](https://user-images.githubusercontent.com/91131873/191555788-9e6a9208-2439-4c3c-ba0e-05af664adf22.png)
+![Create Table](https://github.com/apatez/starter-restaurant-reservation/blob/main/front-end/src/images/us-04-create-table-submit-before.png)
 
 ## **Technology**
 ### **Built with:**
