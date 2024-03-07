@@ -32,7 +32,7 @@
 
 
 #### **Edit Reservation:**
-![Edit Reservation](https://user-images.githubusercontent.com/91131873/191555684-b5625fe0-56ab-4885-a3f3-8cd8b48545f3.png)
+![Edit Reservation](https://github.com/apatez/starter-restaurant-reservation/blob/main/front-end/src/images/us-08-edit-reservation-submit-before.png)
 
 
 #### **Seat Reservation:**
