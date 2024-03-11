@@ -8,7 +8,7 @@
 
 
 ## **Links**
-- [Live Demo](https://rizzo-restaurant-client.herokuapp.com/dashboard)
+- [Live Demo](https://restaurant-reservation-frontend-psi.vercel.app/dashboard)
 - [Server Documentation](https://github.com/apatez/starter-restaurant-reservation/tree/main/back-end/src)
 - [Client Documentation](https://github.com/apatez/starter-restaurant-reservation/tree/main/front-end/src)
 
