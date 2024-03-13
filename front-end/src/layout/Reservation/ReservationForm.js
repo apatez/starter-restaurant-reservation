@@ -113,7 +113,8 @@ function ReservationForm() {
           <input
             id="mobile-number"
             name="mobile_number"
-            type="text"
+            type="tel"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             onChange={handleChange}
             value={reservation.mobile_number}
             required
